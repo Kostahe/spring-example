@@ -1,5 +1,6 @@
 package com.huzil.springexample;
 
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -7,7 +8,9 @@ public class MyFirstService {
 
     private final MyFirstClass myFirstClass;
 
-    public MyFirstService(MyFirstClass myFirstClass) {
+    public MyFirstService(
+            @Qualifier("bean2") MyFirstClass myFirstClass
+    ) {
         this.myFirstClass = myFirstClass;
     }
 
