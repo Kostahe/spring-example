@@ -1,12 +1,14 @@
 package com.huzil.springexample;
 
-import org.springframework.stereotype.Service;
-
-@Service
 public class MyFirstClass {
 
+    private final String myVar;
+
+    public MyFirstClass(String myVar) {
+        this.myVar = myVar;
+    }
 
     public String sayHello() {
-        return "Hello World from MyFirstClass ===> ";
+        return "Hello World from MyFirstClass ===> " + myVar;
     }
 }
